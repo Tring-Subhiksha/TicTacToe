@@ -57,11 +57,8 @@ class Tictactoe{
         return  false;
     }
     static boolean diagonalwin(){
-        if(symbol[0][0]!=' ' && symbol[0][0]==symbol[1][1] && symbol[1][1]==symbol[2][2] || symbol[0][2]!=' ' && symbol[0][2]==symbol[1][1] && symbol[1][1]==symbol[2][0]){
-            return true;
-        }
-        return false;
-    }
+       return symbol[0][0]!=' ' && symbol[0][0]==symbol[1][1] && symbol[1][1]==symbol[2][2] || symbol[0][2]!=' ' && symbol[0][2]==symbol[1][1] && symbol[1][1]==symbol[2][0];
+      
 }
 class Humanmove extends Tictactoe{
     String name;
