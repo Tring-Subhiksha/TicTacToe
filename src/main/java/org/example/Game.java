@@ -86,7 +86,9 @@ class Humanmove extends Tictactoe{
                 return true;
             }
         }
+        else{
         return false;
+        }
     }
 }
 public class Game {
