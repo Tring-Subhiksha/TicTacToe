@@ -11,7 +11,7 @@ class Tictactoe{
     public Tictactoe(){
         gothrough();
     }
-     void gothrough(){
+    static void gothrough(){
         for(int i=0;i<symbol.length;i++){
             for(int j=0;j<symbol[i].length;j++)
             {
@@ -57,8 +57,11 @@ class Tictactoe{
         return  false;
     }
     static boolean diagonalwin(){
-       return symbol[0][0]!=' ' && symbol[0][0]==symbol[1][1] && symbol[1][1]==symbol[2][2] || symbol[0][2]!=' ' && symbol[0][2]==symbol[1][1] && symbol[1][1]==symbol[2][0];
-      
+       if(symbol[0][0]!=' ' && symbol[0][0]==symbol[1][1] && symbol[1][1]==symbol[2][2] || symbol[0][2]!=' ' && symbol[0][2]==symbol[1][1] && symbol[1][1]==symbol[2][0])
+       {
+           return true;
+       }
+        return f
 }
 class Humanmove extends Tictactoe{
     String name;
