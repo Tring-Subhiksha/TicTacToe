@@ -6,10 +6,9 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 class Tictactoe{
-    static char[][] symbol;
+    static char[][] symbol=new char[3][3];
     static PrintStream li=new PrintStream((new FileOutputStream(FileDescriptor.out)));
-    public Tictactoe(){
-        symbol=new char[3][3];
+    Tictactoe(){
         gothrough();
     }
      static void gothrough(){
@@ -93,7 +92,6 @@ class Humanmove extends Tictactoe{
 public class Game {
     public static void main(String[] args) {
         int count=0;
-        Tictactoe ti=new Tictactoe();
         PrintStream li=new PrintStream((new FileOutputStream(FileDescriptor.out)));
         Scanner sc1=new Scanner(System.in);
         Scanner sc=new Scanner(System.in);
@@ -116,7 +114,7 @@ public class Game {
           Tictactoe.displaytictactoe();
           if(Tictactoe.columnwin()||Tictactoe.rowwin()||Tictactoe.diagonalwin()){
               li.println(currentplayer.name+ " has won");
-              break;
+              System.exit(0);
           }
 
           else{
