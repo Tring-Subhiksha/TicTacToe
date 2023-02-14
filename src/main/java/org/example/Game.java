@@ -6,12 +6,13 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 class Tictactoe{
-    static char[][] symbol = new char[3][3];
+    static char[][] symbol;
     static PrintStream li=new PrintStream((new FileOutputStream(FileDescriptor.out)));
     public Tictactoe(){
+        symbol=new char[3][3];
         gothrough();
     }
-    static void gothrough(){
+     static void gothrough(){
         for(int i=0;i<symbol.length;i++){
             for(int j=0;j<symbol[i].length;j++)
             {
@@ -57,11 +58,9 @@ class Tictactoe{
         return  false;
     }
     static boolean diagonalwin(){
-       if(symbol[0][0]!=' ' && symbol[0][0]==symbol[1][1] && symbol[1][1]==symbol[2][2] || symbol[0][2]!=' ' && symbol[0][2]==symbol[1][1] && symbol[1][1]==symbol[2][0])
-       {
-           return true;
-       }
-        return f
+        return(symbol[0][0]!=' ' && symbol[0][0]==symbol[1][1] && symbol[1][1]==symbol[2][2] || symbol[0][2]!=' ' && symbol[0][2]==symbol[1][1] && symbol[1][1]==symbol[2][0]);
+
+    }
 }
 class Humanmove extends Tictactoe{
     String name;
