@@ -9,7 +9,7 @@ class Tictactoe{
     static char[][] symbol;
     static PrintStream li=new PrintStream((new FileOutputStream(FileDescriptor.out)));
     public Tictactoe(){
-        this.symbol=new char[3][3];
+        static symbol=new char[3][3];
         gothrough();
     }
      void gothrough(){
