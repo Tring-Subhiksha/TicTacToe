@@ -6,10 +6,9 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 class Tictactoe{
-    static char[][] symbol;
+    static char[][] symbol = new char[3][3];
     static PrintStream li=new PrintStream((new FileOutputStream(FileDescriptor.out)));
     public Tictactoe(){
-        symbol=new char[3][3];
         gothrough();
     }
      void gothrough(){
